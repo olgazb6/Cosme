@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+{% load static %}
+from shop.views import *
+from shop.forms import *
+from shop.models import *
+from shop.urls import *
+
+{% block title %} О нас {% endblock %}
+
+
+{% block content %}
+
+    {% block header %} id = "header_about" {% endblock %}
+
+<div class="catalog_header">
+    <div class="container">
+        <div class="catalog_header__inner">
+            <nav class="catalog_nav">
+                <a class = "catalog_link" href="{% url 'dlya_tela' %}">Для тела</a>
+                <a class = "catalog_link" href="{% url 'face' %}">Для лица</a>
+                <a class = "catalog_link" href="{% url 'dlya_volos' %}">Для волос</a>
+                <a class = "catalog_link"  href="{% url 'catalog' %}">Все продукты</a>
+            </nav>
+        </div>
+    </div>
+</div>
+    
+
+<div class="catalog_detail">
+        <div class="container">
+            <div class="catalog_detail_inner">
+                <div class="catalog_detail_img">
+                    <img src='{{ product.image.url }}'>
+                </div>
+
+
+                    <div class="catalog_detail_text">
+                        <h2 class='article-title'>{{ product.name }}</h2>
+                        <p class='article-content'>{{ product.info }}</p>
+                        <p class='article-content'><h4>Состав:</h4>{{ product.ingredients }}</p>
+                        <p class='article-content'>Объем: {{ product.volume }}{{ product.unit }}</p>
+                        <p class='article-content'>Цена: {{ product.cost }}руб.</p>
+                    </div>
+
+<!--                <form action="#" metod='post'>-->
+<!--                    {% csrf_token %}-->
+<!--                    {{ cart_product_form }}-->
+<!--                </form>-->
+<!--                <form action="#" metod='post'>-->
+<!--                </form>-->
+<!--                <form action="#" metod='post'>-->
+<!--                    <input type='submit' value='Add to cart'>-->
+<!--                </form>-->
+
+<!--                <div> &lt;!&ndash; добавоение товаров &ndash;&gt;-->
+<!--                    <form class="f_buy" id="f_buy">-->
+<!--                        <input type="number" class="inp_buy" name="number" id="number">-->
+<!--                        -->
+
+<!--                    <button type="submit" class="bt_buy" id="submit_btn"-->
+<!--                    data-product_id = "{{ product.id }}"-->
+<!--                    data-name = "{{ product.name }}"-->
+<!--                    data-price = "{{ product.cost }}"-->
+<!--                    >-->
+<!--                        Купить</button>-->
+<!--                    -->
+<!--                        </form>-->
+<!--                </div>-->
+
+
+
+            </div>
+        </div>
+</div>
+
+{% endblock %}

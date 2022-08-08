@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} EcoCosme {% endblock %}
+
+{% block content %}
+
+
+
+     <div class="login">
+        <div class="container">
+            <div class="login_inner">
+                <form class='login_form' method='post' action="{% url 'login' %}">
+                {% csrf_token %}
+                    <span class='login_world'> Вход </span>
+                    {% for error in login_form.non_field_errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                      <div class="user_name">
+                         <input class="form-input" type="text" name="username" placeholder="Имя пользователя" value="{{ username }}">
+                      </div>
+                      <div class="password">
+                         <input class="form-input" type="password" name="password" placeholder="Пароль" >
+                      </div>
+
+                      <div class="btn_login">
+                         <button type="submit" class="request-btn"> Вход </button>
+                      </div>
+                        <div class="fog_pas_r_login">
+                         <a class="request-btn" href="{% url 'password_reset' %}"> Забыли пароль? </a>
+                        </div>
+                        <div class="fog_pas_r_login">
+                         <a class="request-btn" href="{% url 'register' %}"> Регистрация </a>
+                        </div>
+
+                </form>
+            </div>
+        </div>
+     </div>
+
+
+
+{% endblock %}

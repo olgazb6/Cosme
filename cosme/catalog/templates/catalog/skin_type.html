@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block title %} Продукция {% endblock %}
+
+
+{% block content %}
+
+    {% block header %} id = "header_about" {% endblock %}
+
+<div class="catalog_header">
+    <div class="container">
+        <div class="catalog_header__inner">
+            <nav class="catalog_nav">
+                <a class = "catalog_link" href="{% url 'dlya_tela' %}">Для тела</a>
+                <a class = "catalog_link" href="{% url 'face' %}">Для лица</a>
+                <a class = "catalog_link" href="{% url 'dlya_volos' %}">Для волос</a>
+                <a class = "catalog_link" href="{% url 'skin_type' %}">По типу кожи</a>
+                <a class = "catalog_link"  href="{% url 'catalog' %}">Все продукты</a>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="skin">
+    <div class="container">
+        <div class="skin_inner">
+            <div class="skin_item">
+                <div class="skin_img">
+                    <a href="{% url 'dry_skin'%}"><img src="../static/catalog/images/skin_dry.png" ></a>
+                </div>
+                <div class="skin_link">
+                    <a href="{% url 'dry_skin'%}">Сухая кожа</a>
+                </div>
+            </div>
+            <div class="skin_item">
+                <div class="skin_img">
+                    <a href="{% url 'normal_skin'%}"><img src="../static/catalog/images/skin_norm.png" ></a>
+                </div>
+                <div class="skin_link">
+                    <a href="{% url 'normal_skin'%}">Нормальная кожа</a>
+                </div>
+            </div>
+            <div class="skin_item">
+                <div class="skin_img">
+                    <a href="{% url 'oil_skin'%}"><img src="../static/catalog/images/skin_oil.png" ></a>
+                </div>
+                <div class="skin_link">
+                    <a href="{% url 'oil_skin'%}">Жирная кожа</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

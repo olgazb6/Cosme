@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block title %} Блог {% endblock %}
+
+
+{% block content %}
+
+    {% block header %} id = "header_about" {% endblock %}
+
+<div class="blog_detail">
+    <div class="container">
+        <div class="blog_detail_inner">
+            <div class="blog_left">
+                 <div class="blog_detail_img">
+                    <img src='{{ blog_item.image.url }}'>
+                </div>
+                <div>
+                    <h2 class='blog_title'>{{ blog_item.title }}</h2>
+                    <p class='blog_text'>{{ blog_item.text }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="blog_comment">
+    <div class="container">
+        <div class="com_title">
+            <h2  class="com_tit">Комментарии ({{ blog_item.blog_comment.all.count }})</h2>
+        </div>
+        <div class="all_comments">
+            <ul>
+            {% for i in blog_item.blog_comment.all %}
+               <li>
+                    {{ i.author }}<br>
+                    {{ i.text }}<br>
+                    {{ i.created_on }}
+               </li><br><br>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="add_comment">
+        <form action = '' id = 'add_form' method="post">
+            {%  csrf_token %}
+             {{ form }}
+        </form>
+
+        <button form= 'add_form' type = 'submit' class="btn_add">Добавить</button>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

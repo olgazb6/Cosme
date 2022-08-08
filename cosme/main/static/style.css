@@ -1,0 +1,426 @@
+body {
+    margin: 0; background-color: #F8F8F6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #45562A;}
+*,
+*:before,
+*:after{ box-sizing: border-box;}
+
+h1, h2, h3, h4, h5, h6 {margin:0}
+
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0% auto;
+    padding: 0 15px;}
+
+
+/*Intro*/
+
+.intro{
+    width: 100%;
+    height: 100vh;
+    background:
+    url("../static/images/back.png") center
+    no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;    }
+
+.into_inner{max-width: 970px;
+max-height: auto; margin: 0% auto;
+text-align: center;}
+
+@font-face {
+	font-family: 'Conv_18145';
+	src: url('fonts/18145.eot');
+	src: local('вє'), url('fonts/18145.woff') format('woff'), url('fonts/18145.ttf') format('truetype'), url('fonts/18145.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+
+.intro_title{font-family: 'Roboto Slab', serif;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 0.25;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 300px;
+    }
+
+.btn {display: inline-block;
+font-size: 40px ;color: #fff;
+letter-spacing: 2px;
+font-weight: 700;text-transform: uppercase;
+text-decoration: none;
+padding: 16px 100px;
+border-radius: 15px;
+font-family: inherit;
+border: 0;
+cursor: pointer;
+transition: background 0.4s linear;
+    position: absolute;
+    top: 470px;}
+
+.btn--green{background-color: #6EB14D;}
+
+.btn--green:hover{background-color: #45562A;;}
+
+/*Header*/
+
+.header{width: 100%;height: 120px;margin: 0% auto;
+position:fixed; z-index: 100;}
+
+.header__inner{
+    display: flex; justify-content: space-between;
+    padding: 35px 0;
+    align-items: center;}
+
+@font-face {
+	font-family: 'Conv_Cremona';
+	src: url('fonts/Cremona.eot');
+	src: local('в є'), url('fonts/Cremona.woff') format('woff'), url('fonts/Cremona.ttf') format('truetype'), url('fonts/Cremona.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;}
+
+.logo a, .logo #logo_footer{
+    font-family: 'Conv_Cremona';
+    font-size: 50px;
+    color:#45562A;
+    text-decoration: none;}
+
+
+.nav{
+    float: right;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+    grid-template-columns: repeat(5, max-content);
+    grid-gap: 40px;}
+
+.nav_link{
+    display:inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+    color:#45562A;
+    transition:  color .2s linear;
+    text-decoration: none;}
+
+.nav_link:hover{color: #6EB14D; }
+
+.user_icon img, .shop_icon img{  height:21px;}
+
+
+/*NEW*/
+.new{
+    width: 100%;
+    height: 800px;
+    background-color: #F8F8F6;}
+
+.new_title{ height: 100px; position: relative; top: 80px}
+
+.new_title_text{font-family: 'Roboto Slab', serif;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 2px;   }
+
+.new_products{display: flex; justify-content: center; 
+    flex-wrap: wrap; position:relative; top:180px;}
+
+.new_product{ justify-content: center;flex-wrap: wrap; float: left;
+margin-right: 40px;}
+
+.new_img img{width:300px; margin-bottom: 25px;}
+
+.new_name{font-size:16px;  border-bottom: 1px solid;
+color: #45562A;}
+
+.new_name a{text-decoration: none;color: #45562A;margin-bottom: 15px;}
+
+.new_img, .new_name, .new_cost{display: flex; justify-content: center;} 
+.new_cost{font-weight: 700; }
+
+
+
+/*ZAICY*/
+.main_2 {height: 250px; width: 100%;
+    background-color: #EBE0D8;}
+
+
+
+.zaicy_svg{display: flex;
+    width: 100px; height: 100px; fill: #45562A;
+margin: 40px auto 20px;}
+
+.zaicy_text{text-align:center;}
+
+
+.zaicy {display: flex; flex-wrap: wrap;
+    justify-content: space-evenly;}
+
+
+
+.main_3{
+    width: 100%;
+    height: 800px;
+    background-color: #F8F8F6;}
+
+/* Footer*/
+.footer{width: 100%; background-color: #EBE0D8; margin-top: 150px; }
+
+
+.footer_inner{
+    width: 100%;
+    height: 250px;
+    background-color: #EBE0D8;}
+
+.footer_menu{ float:left;
+    position: relative;
+    top: 65px; left: 0px; line-height: 40px;}
+
+
+.logo #logo_footer {
+    font-size: 40px;}
+
+.social_items{display: flex;}
+
+.social_item{display: flex; margin-right: 20px;
+    width: 50px; height: 50px; fill: #45562A;
+    transition: fill 0.5s linear;
+}
+.social_item:hover{fill: #6EB14D;}
+
+
+.footer_text_right{display: flex;justify-content: space-between;
+    float: right; position: relative;
+    top: 65px; left: 0px;text-align: right;}
+
+
+/* Bot */
+
+.social_icon_bot{
+    display: flex; margin-right: 20px;
+    width: 30px; height: 30px; fill: #45562A;
+    transition: fill 0.5s linear; margin-top: 3px;
+}
+
+.text_bot{display: flex; font-size: 16px; margin-top: 10px;}
+
+.footer_bot_inner{display: flex; flex-wrap: wrap; justify-content: center;
+     }
+
+.footer_bot{ background: #F8F8F6; height: 35px;}
+
+
+
+/*ABOUT  / DELIVERY / CONTACTS
+_____________________________________________________________*/
+
+#header_about {
+    background-color: #F8F8F6;
+    z-index: 100; border-bottom: 2px solid ;
+    border-bottom-color: #EBE0D8;    }
+
+.about, .delivery, .contacts {width: 100%;
+height: 1500px; margin: 0% auto;
+    background-color: #F8F8F6; }
+
+.contacts{ height: 1100px; }
+
+.about_inner, .delivery_inner, .contacts_inner{
+position: relative; top: 200px;
+    display: flex; flex-wrap: wrap;}
+
+.contacts_inner {height: 1000px; }
+
+.about_word, .delivery_word {width: 20%;
+height: 1700px;}
+
+.contacts_word{ width: 20%; height: 1200px; }
+
+.about_text, .delivery_text{width: 70%; height: 1700px;}
+
+.contacts_text{ width: 70%; height: 1200px; }
+
+
+/* CATALOG
+_____________________________________________________________*/
+
+/* Список */
+
+.catalog_header{top: 120px ;width: 100%;margin: 0% auto;
+    position:fixed; z-index: 100; background:#EBE0D8;}
+    
+.catalog_header__inner{ height: 40px; 
+display: flex; justify-content: center;
+padding: 10px 0;
+align-items: end;}
+
+.catalog_nav{
+    float: right;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+    grid-template-columns: repeat(5, max-content);
+    grid-gap: 40px;}
+
+.catalog_link{
+    display:inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+    color:#45562A;
+    transition:  color .2s linear;
+    text-decoration: none;}
+
+.catalog_link:hover{color: #6EB14D; }
+
+/* content */
+
+.catalog_content{position: relative ; top: 210px; height: 1040px; }
+
+#dlya_tela{height: 1040px}
+#dlya_volos{height: 1040px}
+#face{height: 1320px}
+
+
+.catalog_products{display: flex; width: 25%; margin-bottom: 50px;
+     flex-wrap: wrap; float: left; align-items: center; justify-content: center;
+     border-bottom: 1px solid; color: #45562A;
+}
+
+.catalog_img img{width:150px;}
+
+.catalog_img , .catalog_link, .catalog_cost{display: flex; justify-content: center;}
+
+.catalog_link{text-align: center; margin-top: 15px;}
+
+.catalog_link a{text-decoration: none;
+    color:#45562A; font-size: 14px;}
+
+/* skin type header */
+
+.catalog_skin_header{top: 160px ;width: 100%;margin: 0% auto;
+    position:fixed; z-index: 1000; background:#F8F8F6;
+    border-bottom: 1px solid; color: #EBE0D8;}
+
+.catalog_skin_header__inner{ height: 40px;
+display: flex; justify-content: center;
+padding: 10px 0;
+align-items: end;}
+
+.catalog_skin_nav{
+    float: right;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    grid-template-columns: repeat(5, max-content);
+    grid-gap: 40px;}
+
+.catalog_skin_link{
+    display:inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+    color:#45562A;
+    transition:  color .2s linear;
+    text-decoration: none;}
+
+.catalog_skin_link:hover{color: #6EB14D; }
+
+/* skin type */
+
+.skin{position: relative ; top: 250px; height: 710px; }
+
+.skin_inner{display: flex;  margin-bottom: 30px;
+    
+     align-items: center; justify-content: center;}
+
+.skin_item{ flex-wrap: wrap; float: left; margin-right: 30px;}
+.skin_img, .skin_link {display: flex; justify-content: center;}
+
+.skin_img img{width:250px;}
+
+.skin_link{text-align: center; margin-top: 15px;}
+
+.skin_link a{text-decoration: none;
+    color:#45562A; font-size: 14px;
+    text-transform: uppercase;}
+
+.catalog_cost p{font-weight: 700;}
+
+.btn_page{text-decoration: none;
+    color:#45562A; font-size: 14px;
+    text-transform: uppercase;}
+
+
+/* DETAIL
+_____________________________________________________________*/
+
+.catalog_detail{width: 100%;height: 700px;}
+
+.catalog_detail_inner{display: flex;
+flex-wrap: wrap; position: relative; top: 250px;}
+
+
+.catalog_detail_img{width: 40%;}
+
+.catalog_detail_text{ width:50%;}
+
+
+
+
+
+/* SHOP
+_____________________________________________________________*/
+
+.shop_item_inner{height: 500px;}
+.shop_item_word{position:relative; top:300px;}
+
+/*Blog
+_____________________________________________________________*/
+
+.new--blog{height: 600px;}
+
+.new_product--blog{width: 250px;}
+
+.new_img--blog img{ object-fit: cover;
+    width: 250px;
+    height: 200px;}
+
+/* blog_detail */
+
+.blog_text{text-align: left;}
+.blog_text{width: 100%;}
+.blog_detail_img{display: flex}
+.blog_detail_img img{margin-top: 200px; margin-bottom: 100px; width: 100%; height: 500px; object-fit: cover;}
+.blog_title{margin-bottom: 70px; text-align: center; text-transform: uppercase;}
+
+
+/* login*/
+
+.login{height: 500px;}
+
+.login_inner{
+    width: 100%;
+    position: relative; top: 200px;
+}
+.login_world{font-size: 35px; font-weight: bold;}
+.form-input{height: 50px;width: 20%; background: #F8F8F6; margin: 20px 0 0 0;
+border: 3px solid #EBE0D8; outline-color: #6EB14D;}
+.btn_login button, .btn_add{margin-top: 15px; margin-bottom: 15px; width: 100px; height: 50px;
+background: #EBE0D8; transition: background .5s linear; border: none;}
+
+.btn_login button:hover, .btn_add:hover{background: #6EB14D;}
+
+.fog_pas_r_login a{text-decoration: none; color: #45562A;}
+
+/*Регистрация*/
+.register{height: 500px;}
+.register_inner{width: 100%;
+    position: relative; top: 200px;}
+
+/*pasport redet done*/
+.space{width: 100%; height: 500px;}
+
+.alert{ width: 100%;
+    position: relative; top: 200px; text-align: center;}

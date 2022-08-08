@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} EcoCosme {% endblock %}
+
+{% block content %}
+    <div class="register">
+
+        <div class="container">
+            <div class="register_inner">
+                <form class='register_form' method='post' action="{% url 'register' %}">
+                {% csrf_token %}
+                    <span class='login_world'> Регистрация </span>
+                    {% for error in login_form.non_field_errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                      <div class="user_name">
+                         <input class="form-input" type="text" name="username" placeholder="Имя пользователя" value="{{ username }}">
+                      </div>
+                    <div class="user_mail">
+                         <input class="form-input" type="email" name="email" placeholder="Эл.почта" value="{{ email }}">
+                      </div>
+                      <div class="password">
+                         <input class="form-input" type="password" name="password" placeholder="Пароль" >
+                      </div>
+
+                      <div class="btn_login">
+                         <button type="submit" class="request-btn"> Регистрация </button>
+                      </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

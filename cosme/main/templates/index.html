@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block title %} EcoCosme {% endblock %}
+
+{% block content %}
+
+
+
+        {% block header %} {% endblock %}
+
+        <div class="intro">
+                <div class="container">
+                    <div class="intro_inner">
+                        <h1 class="intro_title">Уникальная серия<p>ухода для тебя</p></h1><br>
+                        <a class="btn btn--green" href="{% url 'skin_type' %}">Хочу</a>
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="new">
+            <div class="container">
+                <div class="new_inner">
+                        <div class="new_title">
+                                <h1  class="new_title_text">Новинки</h1>
+                        </div>
+                        <div class="new_products">
+                            {% for pr in product %}
+                                <div class="new_product">
+                                    
+                                    <div class="new_img">
+                                        <img src="{{ pr.image.url }}" >
+                                    </div>
+                                    <div class="new_name">
+                                        <a href="{% url 'catalog_detail' pr.pk %}">{{ pr.name }}</a>
+                                    </div>
+                                    <div class="new_cost">
+                                        <p>{{ pr.cost }}руб.</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="main_2">
+            <div class="container">
+                <div class="zaicy">
+                    <div class="zaicy_inner">
+                        <svg class="zaicy_svg">
+                        <use xlink:href="#1"></use></svg>
+                        <div class="zaicy_text">Натуральные <br>ингредиенты</div>
+                    </div>
+                    <div class="zaicy_inner">
+                        <svg class="zaicy_svg">
+                        <use xlink:href="#2"></use></svg>
+                        <div class="zaicy_text">Не тестируется<br>на животных</div>
+                    </div>
+                    <div class="zaicy_inner">
+                        <svg class="zaicy_svg">
+                        <use xlink:href="#3"></use></svg>
+                        <div class="zaicy_text">Европейские<br>материалы</div>
+                    </div>
+                    <div class="zaicy_inner">
+                        <svg class="zaicy_svg">
+                        <use xlink:href="#4"></use></svg>
+                        <div class="zaicy_text">Ручная<br>работа</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+           
+        <div class="new new--blog">
+            <div class="container">
+                <div class="new_inner new_inner--blog">
+                    <div class="new_title">
+                        <h1  class="new_title_text">Блог</h1>
+                    </div>
+                    <div class="new_products ">
+                    {% for item in blog_item %}
+                        <div class="new_product new_product--blog" >
+                                <div class="new_img new_img--blog" >
+                                    <a href="{% url 'blog_detail' item.pk %}"><img src="{{ item.image.url }}" ></a>
+                                </div>
+                                <div class="new_name">
+                                    <a href="{% url 'blog_detail' item.pk %}">{{ item.title }}</a>
+                                </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
